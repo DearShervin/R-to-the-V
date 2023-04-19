@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1a1f30;
+  font-family: "Tilt Neon", cursive;
+  position: relative;
+}
+main {
+  position: absolute;
+}
+
+#logo {
+  color: white;
+  font-family: "Tilt Neon", cursive;
+}
+.nav-header {
+  min-height: 10vh;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  width: 80%;
+  margin: auto;
+  padding: 1rem 0rem;
+  z-index: 2;
+  position: relative;
+}
+.line1,
+.line2 {
+  width: 1.6rem;
+  height: 0.18rem;
+  margin: 0.4rem;
+  background: white;
+  pointer-events: none;
+  border-radius: 45%;
+}
+img {
+  width: 28rem;
+  height: auto;
+  object-fit: cover;
+}
+.preview,
+.members-direct,
+.songs-pre {
+  min-height: 100vh;
+  margin: 0 auto 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background: #1a1f30; /*#292B3D;*/
+  /* overflow: hidden; */
+}
+.gp-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  flex-basis: 25rem;
+  padding-left: 5rem;
+  position: relative; /*because we are gonna put a layer on it and then the layers slides showing our texted div*/
+  /* overflow-y: hidden;
+  overflow-x: hidden; */
+}
+.gp-img {
+  position: relative;
+  flex: 1;
+  flex-basis: 25rem;
+  overflow: hidden;
+}
+.pre-span-1 {
+  color: rgb(241, 72, 131); /*rgb(72, 198, 241)*/
+}
+.mem-span {
+  color: rgb(86, 124, 228);
+}
+.song-span {
+  color: rgb(167, 110, 231);
+}
+.gp-desc h2 {
+  font-size: 5rem;
+}
+.gp-desc p {
+  padding: 3rem 0rem;
+  font-size: 1.5rem;
+}
+.explore {
+  padding: 1rem 2rem;
+  background: none;
+  border: none;
+  color: white;
+  border: 1px solid white;
+  font-size: 1rem;
+  text-decoration: none;
+  align-self: flex-start;
+  cursor: pointer;
+  border-radius: 5%;
+}
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(241, 72, 131);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+  opacity: 1;
+  clip-path: circle(50px at 100% -10%); /*we put it out of frame*/
+  -webkit-clip-path: circle(
+    50px at 100% -10%
+  ); /*for compatibility with other browsers*/
+}
+.burger {
+  cursor: pointer;
+}
+.nav-links {
+  font-size: 3rem;
+  flex-basis: 30rem;
+}
+.nav-links h3 {
+  padding: 3rem 0rem;
+}
+.contact {
+  flex-basis: 30rem;
+}
+.contact h2 {
+  font-size: 3rem;
+  padding: 2rem 0rem;
+}
+.contact p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.reveal-img,
+.reveal-text {
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  background: #1a1f30;
+  left: 0;
+  top: -15%;
+}
+
+.cursor {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 2px solid white;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+  transition-property: background;
+  transition-property: transform;
+  transform-origin: 100% 100%;
+}
+.cursor.nav-active {
+  background: rgb(241, 72, 131);
+  transform: scale(2);
+}
+.cursor.explore-active-one {
+  background: rgb(241, 72, 131);
+  transform: scale(2);
+}
+.cursor.explore-active-two {
+  background: rgb(86, 124, 228);
+  transform: scale(2);
+}
+.cursor.explore-active-three {
+  background: rgb(167, 110, 231);
+  transform: scale(2);
+}
+.cursor-text {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  font-size: 0.5rem;
+  transform: translate(-50%, -50%);
+}
+/* .title{
+  position: relative;
+  overflow: hidden;
+} */
+.scrollmagic-pin-spacer {
+  position: static !important;
+  overflow: hidden;
+}
+.title {
+  position: relative;
+  overflow: hidden;
+}
+.title-swipe {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  mix-blend-mode: darken;
+  transform: translateY(100%);
+}
+.t-swipe1 {
+  background-color: rgb(241, 72, 131);
+}
+.t-swipe2 {
+  background-color: rgb(86, 124, 228);
+}
+.t-swipe3 {
+  background-color: rgb(167, 110, 231);
+}
+body.hide {
+  overflow: hidden;
+}
+/*b2825d*/
+/* rgb(87, 198, 235) */
+
+/* Image Page : */
+
+.member1,
+.member2,
+.member3,
+.member4,
+.member5 {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  color: white;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+.member-img img {
+  height: 35rem;
+  width: auto;
+  flex-basis: 30rem;
+  object-fit: cover;
+  padding-left: 2rem;
+}
+.member-text {
+  flex: 1;
+  position: relative;
+  flex-basis: 25rem;
+  margin: 2rem;
+}
+.member-text h1 {
+  font-size: 4.5rem;
+  padding: 2rem 0rem;
+}
+.member-text p {
+  font-size: 2rem;
+  padding: 2rem 2rem 0rem 0rem;
+  margin-bottom: 5rem;
+}
+.member1 h1 {
+  color: rgb(241, 72, 131);
+}
+.member2 h1 {
+  color: #FFA500;
+}
+.member3 h1 {
+  color: #00FF00;
+}
+.member4 h1 {
+  color: #00C2FF;
+}
+.member5 h1 {
+  color: #A020F0;
+}
+
+.swipe {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+.swipe1 {
+  background: rgb(241, 72, 131);
+  z-index: 5;
+}
+.swipe2 {
+  background: rgb(86, 124, 228);
+  z-index: 4;
+}
+.swipe3 {
+  background: rgb(167, 110, 231);
+  z-index: 3;
+}
