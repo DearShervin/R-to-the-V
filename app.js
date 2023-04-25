@@ -146,6 +146,40 @@ barba.init({
         detailScene.destroy();
       },
     },
+    {
+      namespace: "explore",
+      beforeEnter() {
+        logo.href = "../index.html";
+        detailAnimation();
+        gsap.fromTo(
+          ".nav-header",
+          1,
+          { y: "100%" },
+          { y: "0%", ease: "power2.inOut" }
+        );
+      },
+      beforeLeave() {
+        controller.destroy();
+        detailScene.destroy();
+      },
+    },
+    {
+      namespace: "songs",
+      beforeEnter() {
+        logo.href = "../index.html";
+        detailAnimation();
+        gsap.fromTo(
+          ".nav-header",
+          1,
+          { y: "100%" },
+          { y: "0%", ease: "power2.inOut" }
+        );
+      },
+      beforeLeave() {
+        controller.destroy();
+        detailScene.destroy();
+      },
+    },
   ],
   transitions: [
     {
